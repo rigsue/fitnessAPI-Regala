@@ -70,7 +70,10 @@ connectDB();
 
 app.use('/users', userRoutes);
 app.use('/workouts', workoutRoutes);
-
+// for functionality test upon deployment (backend Only)
+app.get('/', (req, res) => {
+  res.send('🏋️‍♂️ Fitness Tracker API is running!');
+});
 
 // Mongodb connection end < < <
 
